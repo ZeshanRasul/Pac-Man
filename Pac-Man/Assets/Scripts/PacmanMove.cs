@@ -50,9 +50,6 @@ public class PacmanMove : MonoBehaviour
     {
         Vector2 pos = transform.position;
         RaycastHit2D hit = Physics2D.Linecast(pos + dir, pos);
-        Debug.Log(pos);
-        Debug.Log(dir);
-        Debug.Log(hit.collider.name);
         return (hit.collider == GetComponent<Collider2D>());
     }
 
