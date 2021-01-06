@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pacdot : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class Pacdot : MonoBehaviour
     {
         if (other.name == "Pac-Man")
         {
+            ScoreUI.scoreValue += 10;
             Destroy(gameObject);
+
         }    
     }
 }
