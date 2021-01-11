@@ -38,7 +38,12 @@ public class GhostMove : MonoBehaviour
     {
         if (other.name == "Pac-Man")
         {
-            Destroy(other.gameObject);
+            LivesUI.lives--;
+
+            if (LivesUI.lives == 0)
+            {
+                Destroy(other.gameObject);
+            }
         }
     }
 }
