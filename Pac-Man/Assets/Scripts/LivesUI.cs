@@ -19,7 +19,6 @@ public class LivesUI : MonoBehaviour
         lifeIcon1 = transform.Find("LifeIcon1");
         lifeIcon2 = transform.Find("LifeIcon2");
         lifeIcon3 = transform.Find("LifeIcon3");
-
     }
 
     // Update is called once per frame

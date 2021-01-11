@@ -8,5 +8,6 @@ public class PlayGame : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Game");
+        LivesUI.lives = 3;
     }
 }

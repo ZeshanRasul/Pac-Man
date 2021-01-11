@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GhostMove : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class GhostMove : MonoBehaviour
             if (LivesUI.lives == 0)
             {
                 Destroy(other.gameObject);
+                SceneManager.LoadScene("GameOverScreen");
             }
         }
     }
