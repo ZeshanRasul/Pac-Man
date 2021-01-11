@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class LivesUI : MonoBehaviour
 {
     public static int lives = 3;
+    public static int lifeIncreaseCounter = 0;
+    public int lifeIncreaseLimit = 100;
     Transform lifeIcon1;
     Transform lifeIcon2;
     Transform lifeIcon3;
@@ -26,7 +28,7 @@ public class LivesUI : MonoBehaviour
         if (lives < 3)
         {
             lifeIcon3.gameObject.SetActive(false);
-        }
+        } 
         if (lives < 2)
         {
             lifeIcon2.gameObject.SetActive(false);
@@ -34,6 +36,19 @@ public class LivesUI : MonoBehaviour
         if (lives < 1)
         {
             lifeIcon1.gameObject.SetActive(false);
+        }
+
+        if (lifeIncreaseCounter > lifeIncreaseLimit && lives < 3)
+        {
+            lives++;
+            if (lives == 2)
+            {
+                lifeIcon2.gameObject.SetActive(true);
+            } 
+            if (lives == 3)
+            {
+                lifeIcon3.gameObject.SetActive(true);
+            }
         }
     }
 }

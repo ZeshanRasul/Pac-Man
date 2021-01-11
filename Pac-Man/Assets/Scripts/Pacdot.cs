@@ -10,6 +10,7 @@ public class Pacdot : MonoBehaviour
         if (other.name == "Pac-Man")
         {
             ScoreUI.scoreValue += 10;
+            LivesUI.lifeIncreaseCounter++; 
             Destroy(gameObject);
 
         }    
