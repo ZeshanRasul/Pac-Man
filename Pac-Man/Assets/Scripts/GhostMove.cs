@@ -40,6 +40,7 @@ public class GhostMove : MonoBehaviour
         if (other.name == "Pac-Man")
         {
             LivesUI.lives--;
+            other.GetComponent<AudioSource>().Play();
 
             if (LivesUI.lives == 0)
             {

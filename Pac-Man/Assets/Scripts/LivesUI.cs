@@ -40,6 +40,7 @@ public class LivesUI : MonoBehaviour
         if (lifeIncreaseCounter > lifeIncreaseLimit && lives < 3)
         {
             lives++;
+            lifeIncreaseCounter = 0;
             if (lives == 2)
             {
                 lifeIcon2.gameObject.SetActive(true);
