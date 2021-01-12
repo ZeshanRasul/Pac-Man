@@ -9,5 +9,6 @@ public class PlayGame : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
         LivesUI.lives = 3;
+        ScoreUI.scoreValue = 0;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Pacdot : MonoBehaviour
 {
@@ -10,8 +11,16 @@ public class Pacdot : MonoBehaviour
         if (other.name == "Pac-Man")
         {
             ScoreUI.scoreValue += 10;
-            LivesUI.lifeIncreaseCounter++; 
+            if (LivesUI.lives < 3)
+            {
+                LivesUI.lifeIncreaseCounter++; 
+            }
             Destroy(gameObject);
+
+            if (ScoreUI.scoreValue == 3270)
+            {
+                SceneManager.LoadScene("GameCompleteScreen");
+            }
         }    
     }
 }
